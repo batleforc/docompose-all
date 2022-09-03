@@ -1,0 +1,23 @@
+services:
+  portainer:
+    image: portainer/portainer-ce:2.9.3
+    restart: always
+    ports:
+      - "8000:8000"
+      - "9443:9443"
+      - "9000:9000"
+    networks:
+      - gundam
+    volumes:
+      - /mnt/wsl/shared-docker/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    labels:
+      - "traefik.http.routers.portainer.rule=Host(`portainer.localhost`)"
+      - "traefik.http.services.portainer.loadbalancer.server.port=9000"
+      - "traefik.http.routers.portainer.entrypoints=web"
+
+volumes:
+  portainer_data: {}
+networks:
+  gundam:
+    name: gundam
