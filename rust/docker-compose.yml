@@ -2,3 +2,10 @@ services:
   rust:
     container_name: rust
     image: rust:1-bullseye
+    networks:
+      - gundam
+
+
+networks:
+  gundam:
+    name: gundam

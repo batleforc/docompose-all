@@ -7,3 +7,8 @@ docker compose run --rm [-v VOLUME...] [-p PORT...] [-e KEY=VAL...] [-l KEY=VALU
 docker compose run --rm java8 bash
 docker compose run --rm -v /mnt/c/Users/s47960/Documents/Git/School/xmldemerde:/app java8 bash
 ```
+
+## TODO
+
+- Set network
+- conf all remaining tool

@@ -2,6 +2,14 @@ services:
   python3:
     container_name: python3
     image: python:3.9-bullseye
+    networks:
+      - gundam
   python2:
     container_name: python2
     image: python:2
+    networks:
+      - gundam
+
+networks:
+  gundam:
+    name: gundam
