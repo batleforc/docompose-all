@@ -1,0 +1,16 @@
+services:
+  mariadb:
+    container_name: mariadb
+    image: mariadb:latest
+    networks:
+      - gundam
+    environment:
+      MARIADB_ROOT_PASSWORD: toor
+      MARIADB_USER: mariadb
+      MARIADB_PASSWORD: toordb
+    volumes:
+      - ./data:/var/lib/mysql
+
+networks:
+  gundam:
+    name: gundam

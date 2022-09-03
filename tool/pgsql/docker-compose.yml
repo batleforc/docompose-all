@@ -1,0 +1,23 @@
+services:
+  pgsql:
+    container_name: pgsql
+    image: postgres:latest
+    networks:
+      - gundam
+    environment:
+      POSTGRES_PASSWORD: docker
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./data:/var/lib/postgresql/data
+  pgsqlcli:
+    container_name: pgsql-cli
+    image: postgres:latest
+    networks:
+      - gundam
+
+
+networks:
+  gundam:
+    name: gundam

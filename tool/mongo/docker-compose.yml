@@ -1,0 +1,16 @@
+services:
+  mongo:
+    container_name: mongo
+    image: mongo:latest
+    networks:
+      - gundam
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: toor
+      MONGO_INITDB_DATABASE: mongodb
+    volumes:
+      - ./data:/data/db
+
+networks:
+  gundam:
+    name: gundam

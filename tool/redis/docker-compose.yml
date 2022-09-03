@@ -1,0 +1,20 @@
+services:
+  redis:
+    container_name: redis-stack
+    image: redis/redis-stack:latest
+    ports:
+      - 6379:6379
+      - 8001:8001
+    networks:
+      - gundam
+    volumes:
+      - ./data:/data
+  rediscli:
+    container_name: redis-cli
+    networks:
+      - gundam
+    image: redis/redis-stack:latest
+
+networks:
+  gundam:
+    name: gundam
