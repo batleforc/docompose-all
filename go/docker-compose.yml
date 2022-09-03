@@ -1,0 +1,7 @@
+services:
+  go19:
+    container_name: go19
+    image: golang:1.19-bullseye
+  go18:
+    container_name: go18
+    image: golang:1.18-bullseye

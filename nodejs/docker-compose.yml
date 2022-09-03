@@ -1,0 +1,10 @@
+services:
+  node18:
+    container_name: node18
+    image: node:18-bullseye
+  node16:
+    container_name: node16
+    image: node:16-bullseye
+  node14:
+    container_name: node14
+    image: node:14-bullseye

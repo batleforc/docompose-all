@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  java8:
+    container_name: java8
+    image: maven:3.8.6-jdk-8
+    volumes:
+      - /mnt/c/Users/s47960/Documents/Git/
+  java11:
+    container_name: java11
+    image: maven:3.8.6-eclipse-temurin-11
+  java14:
+    container_name: java14
+    image: maven:3.6.3-adoptopenjdk-14

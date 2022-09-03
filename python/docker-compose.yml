@@ -1,0 +1,7 @@
+services:
+  python3:
+    container_name: python3
+    image: python:3.9-bullseye
+  python2:
+    container_name: python2
+    image: python:2

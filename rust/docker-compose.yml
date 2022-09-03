@@ -1,0 +1,4 @@
+services:
+  rust:
+    container_name: rust
+    image: rust:1-bullseye
