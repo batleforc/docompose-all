@@ -4,15 +4,15 @@ services:
     image: quay.io/minio/minio
     volumes:
       - ./data:/data
-    environment:
-      MINIO_ROOT_USER: root
-      MINIO_ROOT_PASSWORD: toor
     networks:
       - gundam
     ports:
       - 9001:9000
       - 9002:9002
-    command: server --console-address ":9002"
+    command: server /data --console-address ":9002"
+    labels:
+      - "traefik.http.routers.minio.rule=Host(`minio.localhost`)"
+      - "traefik.http.services.redis.loadbalancer.server.port=9002"
 
 networks:
   gundam:

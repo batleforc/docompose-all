@@ -9,6 +9,9 @@ services:
       - gundam
     volumes:
       - ./data:/data
+    labels:
+      - "traefik.http.routers.redis.rule=Host(`redis.localhost`)"
+      - "traefik.http.services.redis.loadbalancer.server.port=8001"
   rediscli:
     container_name: redis-cli
     networks:
