@@ -11,6 +11,12 @@ services:
     image: maven:3.8.6-eclipse-temurin-11
     networks:
       - gundam
+  java11scala:
+    container_name: java11scala
+    build: ./image/scala
+    image: batleforc/java:11scala
+    networks:
+      - gundam
   java14:
     container_name: java14
     image: maven:3.6.3-adoptopenjdk-14
