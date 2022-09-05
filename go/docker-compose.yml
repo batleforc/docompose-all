@@ -9,6 +9,12 @@ services:
     image: golang:1.18-bullseye
     networks:
       - gundam
+  go19grpc:
+    container_name: go19grpc
+    build: ./image/grpc
+    image: batleforc/go:1.19-grpc
+    networks:
+      - gundam
 
 networks:
   gundam:
