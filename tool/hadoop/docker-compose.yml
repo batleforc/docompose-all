@@ -2,6 +2,10 @@ services:
   hadoop-master:
     image: liliasfaxi/spark-hadoop:hv-2.7.2
     container_name: hadoop-master
+    stdin_open: true
+    tty: true
+    networks:
+      - gundam
     ports:
       - 50070:50070
       - 8088:8088
@@ -9,11 +13,19 @@ services:
   hadoop-slave1:
     image: liliasfaxi/spark-hadoop:hv-2.7.2
     container_name: hadoop-slave1
+    stdin_open: true
+    tty: true
+    networks:
+      - gundam
     ports:
       - 8040:8042
   hadoop-slave2:
     image: liliasfaxi/spark-hadoop:hv-2.7.2
     container_name: hadoop-slave2
+    stdin_open: true
+    tty: true
+    networks:
+      - gundam
     ports:
       - 8041:8042
 
