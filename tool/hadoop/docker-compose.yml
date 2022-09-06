@@ -5,7 +5,7 @@ services:
     stdin_open: true
     tty: true
     networks:
-      - gundam
+      - hadoopBridge
     ports:
       - 50070:50070
       - 8088:8088
@@ -16,7 +16,7 @@ services:
     stdin_open: true
     tty: true
     networks:
-      - gundam
+      - hadoopBridge
     ports:
       - 8040:8042
   hadoop-slave2:
@@ -25,12 +25,13 @@ services:
     stdin_open: true
     tty: true
     networks:
-      - gundam
+      - hadoopBridge
     ports:
       - 8041:8042
 
 
 
 networks:
-  gundam:
-    name: gundam
+  hadoopBridge:
+    driver: bridge
+    name: hadoopBridge
