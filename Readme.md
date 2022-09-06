@@ -51,6 +51,7 @@ docker exec -it java8 /bin/bash
   -- pgsqlcli
   -- redis
   -- rediscli
+  -- kafka (need zookeeper to be turned on too)
 - Helper
   -- portainer
   -- traefik
