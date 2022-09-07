@@ -13,10 +13,18 @@ services:
       - gundam
   java11scala:
     container_name: java11scala
+    network_mode: "host"
     build: ./image/scala
     image: batleforc/java:11scala
+
+  java-jupy:
+    container_name: java-jupy
+    image: jupyter/all-spark-notebook
+    ports:
+      - "8888:8888"
     networks:
       - gundam
+
   java14:
     container_name: java14
     image: maven:3.6.3-adoptopenjdk-14
