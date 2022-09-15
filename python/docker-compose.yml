@@ -2,16 +2,19 @@ services:
   python3:
     container_name: python3
     image: python:3.9-bullseye
+    working_dir: /app
     networks:
       - gundam
   python2:
     container_name: python2
     image: python:2
+    working_dir: /app
     networks:
       - gundam
   python-miniforge:
     container_name: miniforge
     image: batlefroc/conda:latest
+    working_dir: /app
     ports:
       - 8888:8888
     command: jupyter notebook --ip 0.0.0.0 --allow-root

@@ -1,16 +1,19 @@
 services:
   go19:
     container_name: go19
+    working_dir: /app
     image: golang:1.19-bullseye
     networks:
       - gundam
   go18:
     container_name: go18
+    working_dir: /app
     image: golang:1.18-bullseye
     networks:
       - gundam
   go19grpc:
     container_name: go19grpc
+    working_dir: /app
     build: ./image/grpc
     image: batleforc/go:1.19-grpc
     networks:

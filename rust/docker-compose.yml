@@ -2,6 +2,7 @@ services:
   rust:
     container_name: rust
     image: rust:1-bullseye
+    working_dir: /app
     networks:
       - gundam
 

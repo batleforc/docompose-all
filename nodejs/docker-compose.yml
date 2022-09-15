@@ -2,16 +2,19 @@ services:
   node18:
     container_name: node18
     image: node:18-bullseye
+    working_dir: /app
     networks:
       - gundam
   node16:
     container_name: node16
     image: node:16-bullseye
+    working_dir: /app
     networks:
       - gundam
   node14:
     container_name: node14
     image: node:14-bullseye
+    working_dir: /app
     networks:
       - gundam
 
