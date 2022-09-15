@@ -55,3 +55,7 @@ docker exec -it java8 /bin/bash
 - Helper
   -- portainer
   -- traefik
+
+## Left to do
+
+- Add latext support
