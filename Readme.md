@@ -24,37 +24,37 @@ docker exec -it java8 /bin/bash
 ## List image (service)
 
 - go
-  -- go19 = go 1.19
-  -- go18 = go 1.18
-  -- go19grpc = go 1.19 with grpc support (protoc, protoc-gen-go)
+  - go19 = go 1.19
+  - go18 = go 1.18
+  - go19grpc = go 1.19 with grpc support (protoc, protoc-gen-go)
 - java
-  -- java8 = java 8 with maven 3.8.6
-  -- java11 = java 11 with maven 3.8.6
-  -- java14 = java 14 with maven 3.6.3
-  -- java11scala = based on java11 with scala support (need to be used with "bash -l") (Build directly from the dockerfile)
+  - java8 = java 8 with maven 3.8.6
+  - java11 = java 11 with maven 3.8.6
+  - java14 = java 14 with maven 3.6.3
+  - java11scala = based on java11 with scala support (need to be used with "bash -l") (Build directly from the dockerfile)
 - node
-  -- node14 = node 14
-  -- node16 = node 16
-  -- node18 = node 18
+  - node14 = node 14
+  - node16 = node 16
+  - node18 = node 18
 - python
-  -- python3 = python 3
-  -- python2 = python 2
-  -- python-miniforge = python 3 with miniforge support (Build directly from the dockerfile)
+  - python3 = python 3
+  - python2 = python 2
+  - python-miniforge = python 3 with miniforge support (Build directly from the dockerfile)
 - rust
 - tool
-  -- cassandra and other
-  -- hadoop and other
-  -- mariadb
-  -- minio
-  -- mongo
-  -- pgsql
-  -- pgsqlcli
-  -- redis
-  -- rediscli
-  -- kafka (need zookeeper to be turned on too)
+  - cassandra and other
+  - hadoop and other
+  - mariadb
+  - minio
+  - mongo
+  - pgsql
+  - pgsqlcli
+  - redis
+  - rediscli
+  - kafka (need zookeeper to be turned on too)
 - Helper
-  -- portainer
-  -- traefik
+  - portainer
+  - traefik
 
 ## Left to do
 
