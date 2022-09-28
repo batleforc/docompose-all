@@ -1,6 +1,6 @@
 services:
   tomcat:
-    image: tomcat:7.0.109-jdk8-adoptopenjdk-openj9
+    image: apache/marmotta
     ports:
       - "8080:8080"
     environment:
