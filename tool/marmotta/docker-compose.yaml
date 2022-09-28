@@ -6,5 +6,4 @@ services:
     environment:
       - MARMOTTA_HOME=/app/home
     volumes:
-      - ./volume/home:/app/home
-      - ./volume/home/marmotta.war:/usr/local/tomcat/webapps/marmotta.war
+      - ./data:/app
