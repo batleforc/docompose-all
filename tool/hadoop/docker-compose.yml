@@ -4,8 +4,17 @@ services:
     container_name: hadoop-master
     stdin_open: true
     tty: true
+    command:
+      - sh
+      - -c
+      - service ssh start; bash -c ./start-hadoop.sh && tail -f /dev/null
+    depends_on:
+      - hadoop-slave1
+      - hadoop-slave2
     networks:
       - hadoopBridge
+    volumes:
+      - C:\Users\s47960\Documents\Git\School\BigData:/app
     ports:
       - 50070:50070
       - 8088:8088
