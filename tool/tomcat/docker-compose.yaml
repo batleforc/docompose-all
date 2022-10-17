@@ -1,0 +1,7 @@
+services:
+  tomcat:
+    image: tomcat:8.0
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./volume/webapps:/usr/local/tomcat/webapps
