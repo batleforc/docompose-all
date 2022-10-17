@@ -1,6 +1,6 @@
 services:
   tomcat:
-    image: tomcat:8.0
+    image: tomcat:.5.83-jre11-temurin-focal
     ports:
       - "8080:8080"
     volumes:
