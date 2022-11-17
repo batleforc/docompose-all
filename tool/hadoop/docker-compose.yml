@@ -14,7 +14,7 @@ services:
     networks:
       - hadoopBridge
     volumes:
-      - C:\Users\s47960\Documents\Git\School\BigData:/app
+      - ./:/app
     ports:
       - 50070:50070
       - 8088:8088
