@@ -10,12 +10,23 @@ services:
       POSTGRES_DB: postgres
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - ./data/postgres:/var/lib/postgresql/data
   pgsqlcli:
     container_name: pgsql-cli
     image: postgres:latest
     networks:
       - gundam
+  postgis:
+    image: postgis/postgis
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgis:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DBNAME=postgres
+      - PGDATA=/var/lib/postgresql/data
 
 
 networks:
