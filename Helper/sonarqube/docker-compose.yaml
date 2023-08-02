@@ -1,6 +1,6 @@
 services:
   sonarqube:
-    image: sonarqube:community
+    image: sonarqube:9-community
     hostname: sonarqube
     container_name: sonarqube
     networks:
@@ -22,7 +22,7 @@ services:
       - "traefik.http.services.portainer.loadbalancer.server.port=9000"
       - "traefik.http.routers.portainer.entrypoints=web"
   db:
-    image: postgres:12
+    image: postgres:15
     hostname: postgresql
     container_name: postgresql
     environment:
